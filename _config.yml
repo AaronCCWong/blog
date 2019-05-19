@@ -1,0 +1,54 @@
+title: An Artificial Intelligence and Machine Learning Blog
+name: An AI and ML Blog
+email: aarn.wong@example.com
+description: A blog about artificial intelligence and machine learning.
+meta_description: Blogging about artificial intelligence and machine learning
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  jekyll
+author:         'Aaron Wong'
+authorTwitter:  'aar_wong'
+domain_name: 'http://yourblog-domain.com'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: true
+disqus_shortname: 'an-ai-and-ml-blog'
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins: [jekyll-paginate]
+paginate: 20
+
+aboutPage: true
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+permalink:       /:year/:title/
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
