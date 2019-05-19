@@ -4,12 +4,12 @@ email: aarn.wong@example.com
 description: A blog about artificial intelligence and machine learning.
 meta_description: Blogging about artificial intelligence and machine learning
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  jekyll
+url: 'https://blog.aaronccwong.com' # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  AaronCCWong
 author:         'Aaron Wong'
 authorTwitter:  'aar_wong'
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'https://blog.aaronccwong.com'
+google_analytics: 'UA-70347604-3'
 disqus: true
 disqus_shortname: 'an-ai-and-ml-blog'
 
