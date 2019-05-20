@@ -6,8 +6,11 @@ meta_description: Blogging about artificial intelligence and machine learning
 baseurl: "" # the subpath of your site, e.g. /blog
 url: 'https://blog.aaronccwong.com' # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  AaronCCWong
-author:         'Aaron Wong'
-authorTwitter:  'aar_wong'
+
+author:
+  twitter: aar_wong
+  name: Aaron Wong
+
 domain_name: 'https://blog.aaronccwong.com'
 google_analytics: 'UA-70347604-3'
 disqus: true
@@ -32,7 +35,8 @@ aboutPage: true
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-permalink:       /:year/:title/
+
+permalink: /:year/:title/
 defaults:
     -
         scope:
