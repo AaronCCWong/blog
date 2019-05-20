@@ -52,3 +52,14 @@ defaults:
             type: drafts
         values:
             layout: post
+
+twitter:
+    username: aar_wong
+    card: summary
+
+social:
+  name: Aaron Wong
+  links:
+    - https://twitter.com/aar_wong
+    - https://www.linkedin.com/in/aaron-wong-92041342/
+    - https://github.com/AaronCCWong
