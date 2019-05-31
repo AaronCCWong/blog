@@ -2,6 +2,7 @@
 title: Building a Bigram Hidden Markov Model for Part-Of-Speech Tagging
 date: 2019-05-18 22:18:00
 description: A tutorial on how to build a hidden markov model part of speech tagger.
+image: /assets/images/bigram-hmm/pos-title.jpg
 ---
 
 ![](/assets/images/bigram-hmm/pos-title.jpg)
