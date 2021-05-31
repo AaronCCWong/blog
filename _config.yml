@@ -1,8 +1,8 @@
-title: An Artificial Intelligence and Machine Learning Blog
-name: An AI and ML Blog
+title: A blog about interesting computer science topics
+name: A computer science blog
 email: aarn.wong@example.com
-description: A blog about artificial intelligence and machine learning.
-meta_description: Blogging about artificial intelligence and machine learning
+description: A blog about interesting computer science topics.
+meta_description: Blogging about computer science.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: 'https://blog.aaronccwong.com' # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  AaronCCWong
