@@ -4,7 +4,7 @@ permalink: about/
 profile: true
 ---
 
-I am currently a student at NYU studying for my master's in computer science.
-[Check out my portfolio site here](https://www.aaronccwong.com).
+Hey I'm Aaron. I am a software development engineer at Amazon working on Project Kuiper.
+All opinions in this blog are my own. [Check out my portfolio site here](https://www.aaronccwong.com).
 
 {% include footer.html %}
