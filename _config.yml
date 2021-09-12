@@ -1,7 +1,7 @@
-title: A blog about interesting computer science topics
+title: Aaron Wong's blog
 name: A computer science blog
 email: aarn.wong@example.com
-description: A blog about interesting computer science topics.
+description: A blog about computer science topics I find interesting
 meta_description: Blogging about computer science.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: 'https://blog.aaronccwong.com' # the base hostname & protocol for your site, e.g. http://example.com

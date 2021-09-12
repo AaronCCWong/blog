@@ -170,23 +170,33 @@ $$
 
 Let’s fill out the table for our example using the probabilities we calculated for the finite state transition network of the HMM model.
 
-![](/assets/images/bigram-hmm/table1.png)
+<p style="text-align: center">
+  <img src="/assets/images/bigram-hmm/table1.png" style="max-width: 212px">
+</p>
 
 Notice that the first column has 0 everywhere except for the start row. This is because the sequences for our example always start with <start>. From our finite state transition network, we see that the start state transitions to the dog state with probability 1 and never goes to the cat state. We also see that dog emits meow with a probability of 0.25\. It is also important to note that we cannot get to the start state or end state from the start state. Thus we get the next column of values
 
-![](/assets/images/bigram-hmm/table2.png)
+<p style="text-align: center">
+  <img src="/assets/images/bigram-hmm/table2.png" style="max-width: 279px">
+</p>
 
 Notice that the probabilities of all the states we can’t get to from our start state are 0\. Also, the probability of getting to the dog state for the meow column is 1 * 1 * 0.25 where the first 1 is the previous cell’s probability, the second 1 is the transition probability from the previous state to the dog state and 0.25 is the emission probability of meow from the current state dog. Thus 0.25 is the maximum sequence probability so far. Continuing onto the next column:
 
-![](/assets/images/bigram-hmm/table3.png)
+<p style="text-align: center">
+  <img src="/assets/images/bigram-hmm/table3.png" style="max-width: 407px">
+</p>
 
 Observe that we cannot get to the start state from the dog state and the end state never emits woof so both of these rows get 0 probability. Meanwhile, the cells for the dog and cat state get the probabilities 0.09375 and 0.03125 calculated in the same way as we saw before with the previous cell’s probability of 0.25 multiplied by the respective transition and emission probabilities. Finally, we get
 
-![](/assets/images/bigram-hmm/table4.png)
+<p style="text-align: center">
+  <img src="/assets/images/bigram-hmm/table4.png" style="max-width: 531px">
+</p>
 
 At this point, both cat and dog can get to <end>. Thus we must calculate the probabilities of getting to end from both cat and dog and then take the path with higher probability.
 
-![](/assets/images/bigram-hmm/table5.png)
+<p style="text-align: center">
+  <img src="/assets/images/bigram-hmm/table5.png" style="max-width: 532px">
+</p>
 
 Going from dog to end has a higher probability than going from cat to end so that is the path we take. Thus the answer we get should be
 
@@ -196,7 +206,9 @@ Going from dog to end has a higher probability than going from cat to end so tha
 
 In a Viterbi implementation, the whole time we are filling out the probability table another table known as the backpointer table should also be filled out. The value of each cell in the backpointer table is equal to the row index of the previous state that led to the maximum probability of the current state. Thus in our example, the end state cell in the backpointer table will have the value of 1 (0 starting index) since the state dog at row 1 is the previous state that gave the end state the highest probability. For completeness, the backpointer table for our example is given below.
 
-![](/assets/images/bigram-hmm/table6.png)
+<p style="text-align: center">
+  <img src="/assets/images/bigram-hmm/table6.png" style="width: 209px; height: 108px;">
+</p>
 
 Note that the start state has a value of -1\. This is the stopping condition we use for when we trace the backpointer table backwards to get the path that provides us the sequence with the highest probability of being correct given our HMM. To get the state sequence <start> dog dog <end>, we start at the end cell on the bottom right of the table. The 1 in this cell tells us that the previous state in the woof column is at row 1 hence the previous state must be dog. From dog, we see that the cell is labeled 1 again so the previous state in the meow column before dog is also dog. Finally, in the meow column, we see that the dog cell is labeled 0 so the previous state must be row 0 which is the <start> state. We see -1 so we stop here. Our sequence is then <end> dog dog <start>. Reversing this gives us our most likely sequence.
 

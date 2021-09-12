@@ -100,12 +100,11 @@ h2 {
 
 .profile h2 {
 	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
-
+	font-weight: 300;
+	color: #494e52;
+	margin-top: 10px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: normal;
 }
 
 nav.main-nav {
@@ -253,7 +252,7 @@ em, i { font-style: italic; }
 
 #post-list h2 {
 	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #aaa;
+	color: #494e52;
 	max-width: 400px;
 	margin-top: 2px;
 }
@@ -397,8 +396,8 @@ Post List
 	float: right;
 	position: relative;
 	top: 1px;
-	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #bbb;
+	font: 350 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
+	color: #aaa;
 }
 
 #post-list-footer {
